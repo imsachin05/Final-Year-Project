@@ -187,17 +187,4 @@ spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
 Everything else (entities, repositories, services) stays exactly the same — that's one of the
 selling points of using JPA/Hibernate you can mention in your report.
 
-## 9. For your report/viva
 
-Good talking points this project already gives you:
-- **Layered architecture** (controller → service → repository) — standard enterprise Java pattern
-- **Stateless JWT auth** — explain why (scalability, no server-side session storage)
-- **Derived vs. stored data** — P/L and risk-reward are *calculated on read*, not stored, so
-  they're always consistent with the underlying trade data (good database design talking point)
-- **Equity curve & drawdown** — shows you understand basic risk/performance metrics used in
-  real trading, not just a CRUD app with charts bolted on
-- **AI scope discipline** — every AI feature analyzes the user's OWN historical data rather
-  than predicting markets or giving buy/sell advice; a good example of thinking through the
-  ethics and limits of an AI feature rather than bolting one on for its own sake
-- **Provider-agnostic AI client** — `AiClient` talks to any OpenAI-compatible endpoint, so
-  swapping providers (OpenAI, Groq, a local model) is a config change, not a code change
